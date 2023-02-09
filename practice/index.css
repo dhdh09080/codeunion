@@ -1,0 +1,30 @@
+body {
+    background-color: #343434;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.earth {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: -20px 0 3px rgba(0, 0, 0, 0.3) inset;
+
+    background-image: url('earth.jpg');
+    background-position: 0 0;
+    background-size: 200% 100%;
+    transform: rotate(23.4deg);
+    animation: earth 10s linear infinite;
+    }
+
+    @keyframes earth {
+        0%{
+        background-position: 0 0;
+        }
+        100%{
+        background-position: -200% 0;
+        }
+    }

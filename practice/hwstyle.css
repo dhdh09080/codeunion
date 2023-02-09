@@ -1,0 +1,45 @@
+a {
+    color: blue;
+    text-decoration:none;
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    padding: 3px 0px;
+}
+
+.list_text {
+
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: gray;
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.list_icon {
+    margin-right: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background-color: skyblue;
+}
+
+i {
+    color: white;
+}

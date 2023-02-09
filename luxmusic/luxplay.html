@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/43fd18e4aa.js" crossorigin="anonymous"></script>
+        <link href="index.css" rel="stylesheet">
+        <title>럭스의 추천곡</title>
+    	<style>
+        </style>
+    </head>
+    <body>
+        <div id="boss">
+            <div class="left">
+                <div class="angle">
+                    <div>
+                    <i class="fa-solid fa-angle-left fa-2x"></i>
+                    </div>
+                </div>
+                <div class="angle">
+                    <h1>Now Playing</h1>
+                </div>
+                <div class="nowplaying">
+                    <div class="left-box">
+                        <img class="left-cover-image" src="https://i.ytimg.com/an/bagFQCTHXy8/1832406189417745480_mq.jpg?v=6294898b">
+                    </div>
+                    <div class="nowplayingmusic">
+                        <h1>Beatbox</h1><br/>
+                        <h4>NCT DREAM</h4>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="musiclist one"></div>
+                <div class="musiclist two"></div>
+                <div class="musiclist three"></div>
+                <div class="musiclist four"></div>
+                <div class="musiclist five"></div>
+                <div class="musiclist six"></div>
+                <div class="phone-under">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-regular fa-square"></i>
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+            </div>
+            <div class="right">
+                <div class="phone-top">
+                    <div class="phone-top fold">
+                        <div>KT 09:08</div>
+                        <div class="fold">
+                            <i class="fa-solid fa-comment"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <img class="cover-image" src="https://i.ytimg.com/an/bagFQCTHXy8/1832406189417745480_mq.jpg?v=6294898b">
+                        <div class="wave -one"></div>
+                        <div class="wave -two"></div>
+                        <div class="wave -three"></div>
+                </div>
+                <div class="music-progress-bar">
+                    <div class="music-progress" id="music-progress"></div>
+                </div>
+                <div class="nowplayingmenu">
+                    <div></div>
+                </div>
+                <div class="playtime">
+                    <div class="time">00:00</div>
+                    <div class="time">03:24</div>
+                </div>
+                <div class="controls menu">
+                    <i class="fa-solid fa-laptop"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>                  
+                <div class="music-info">
+                    <div class="title">Beatbox</div>
+                    <div class="artist-name">NCT DREAM</div>
+                </div>
+                <div class="controls">
+                    <i class="fa-solid fa-repeat fa-2x"></i>
+                    <i class="fa-solid fa-backward-step fa-2x"></i>
+                    <i class="play-button fa-solid fa-play fa-2x"></i>
+                    <i class="fa-solid fa-forward-step fa-2x"></i>
+                    <i class="fa-solid fa-shuffle fa-2x"></i>
+                </div>
+                <div class="controls undermenu">
+                    <div>FLAC</div>
+                    <div>연관곡△</div>
+                    <div>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <div class="phone-under">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-regular fa-square"></i>
+                    <i class="fa-solid fa-angle-left"></i>
+                </div>
+            </div>
+        </div>
+        <script>
+            const music = new Audio("NCT_beatbox.mp3");
+            const playButton = document.querySelector(".play-button");
+            
+            playButton.addEventListener("click", playMusic);
+
+            function playMusic(event) {
+                if(music.paused) {
+                    playButton.classList.remove("fa-play");
+                    playButton.classList.add("fa-pause");
+                    music.play();
+                }
+                else {
+                    playButton.classList.remove("fa-pause");
+                    playButton.classList.add("fa-play");
+                    music.pause();
+                }
+            }
+        </script>
+    </body>
+</html>
